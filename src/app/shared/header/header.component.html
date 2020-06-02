@@ -1,0 +1,29 @@
+<mat-toolbar>
+    <button mat-mini-fab color="warn" >
+        <mat-icon aria-hidden="false" aria-label="Example home icon" routerLink="/home">home</mat-icon>
+
+    </button>
+    <span class="example-icon"></span>
+
+    <mat-icon>{{iconTitle}}</mat-icon>
+    <span class="example-icon"></span>
+    
+    {{pageTitle}}
+
+    <span class="example-spacer"></span>
+    <mat-icon [color]="userStatusColor">account_box</mat-icon>
+
+    <span class="example-icon"></span>
+    <mat-icon matBadge="{{counter}}" matBadgePosition="before" matBadgeColor="accent">shopping_cart</mat-icon>
+
+    <span class="example-icon"></span>
+    <mat-icon [matMenuTriggerFor]="navMenu">settings</mat-icon>
+
+
+    <mat-menu #navMenu="matMenu">
+        <!-- facebook link, github link see in 3b -->
+        <a href="{{configData.fblink}}" target="_blank"><button mat-menu-item>Facabook</button></a>
+        <button mat-menu-item routerLink="/contact"><mat-icon>info</mat-icon></button>
+        <button mat-menu-item routerLink="/product"><mat-icon>settings</mat-icon></button>
+    </mat-menu>
+</mat-toolbar>
